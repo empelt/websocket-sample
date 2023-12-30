@@ -126,7 +126,6 @@ func (c *Client) writePump() {
 // serveWs handles websocket requests from the peer.
 func serveWs(c echo.Context) error {
 	id := c.Param("id")
-	log.Println("id:", id)
 
 	if _, ok := hubs[id]; !ok {
 		hubs[id] = newHub()
